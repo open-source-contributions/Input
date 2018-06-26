@@ -11,6 +11,10 @@ trait InputValueGetter {
 		return $this->getString($key);
 	}
 
+	public function getValue(string $key):?string {
+		return $this->getString($key);
+	}
+
 	public function getString(string $key):?string {
 		return $this->getDatum($key);
 	}
