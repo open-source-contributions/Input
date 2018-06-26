@@ -28,7 +28,7 @@ class Helper {
 		}
 		else {
 			$inputDataArray = [];
-			$numberToCreate = rand(1, 100);
+			$numberToCreate = rand(1, 10);
 			for($i = 0; $i < $numberToCreate; $i++) {
 				$inputDataArray[
 					"key-$i-madeup" . uniqid()

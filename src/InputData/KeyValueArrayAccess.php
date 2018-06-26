@@ -9,7 +9,7 @@ trait KeyValueArrayAccess {
 	}
 
 	public function offsetGet($offset):?InputDatum {
-		return $this->get($offset);
+		return $this->getDatum($offset);
 	}
 
 	public function offsetSet($offset, $value):void {

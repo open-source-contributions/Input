@@ -14,7 +14,7 @@ abstract class AbstractInputData implements ArrayAccess, Countable, Iterator {
 	/** @var InputDatum[] */
 	protected $parameters = [];
 
-	public function get(string $key):?InputDatum {
+	public function getDatum(string $key):?InputDatum {
 		return $this->parameters[$key] ?? null;
 	}
 

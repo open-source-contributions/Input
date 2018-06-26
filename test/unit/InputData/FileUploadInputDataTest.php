@@ -69,7 +69,7 @@ class FileUploadInputDataTest extends TestCase {
 			$hasAtLeastOneFieldBeenSingle = false;
 			$hasAtLeastOneFieldBeenMulti = false;
 
-			$numDifferentFileFields = rand(2, 50);
+			$numDifferentFileFields = rand(2, 20);
 			for($iFileUpload = 0; $iFileUpload < $numDifferentFileFields; $iFileUpload++) {
 				$name = "upload_" . uniqid();
 				$files[$name] = [];

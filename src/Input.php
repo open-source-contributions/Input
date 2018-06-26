@@ -70,7 +70,7 @@ class Input implements ArrayAccess, Countable, Iterator {
 	 * Input::METHOD_GET or Input::METHOD_POST as the second parameter (defaults to
 	 * Input::METHOD_BOTH).
 	 */
-	public function get(string $key, string $method = null):?InputDatum {
+	public function getDatum(string $key, string $method = null):?InputDatum {
 		if(is_null($method)) {
 			$method = self::DATA_COMBINED;
 		}
@@ -79,19 +79,19 @@ class Input implements ArrayAccess, Countable, Iterator {
 
 		switch($method) {
 		case self::DATA_QUERYSTRING:
-			$data = $this->queryStringParameters->get($key);
+			$data = $this->queryStringParameters->getDatum($key);
 			break;
 
 		case self::DATA_BODY:
-			$data =$this->bodyParameters->get($key);
+			$data =$this->bodyParameters->getDatum($key);
 			break;
 
 		case self::DATA_FILES:
-			$data = $this->fileUploadParameters->get($key);
+			$data = $this->fileUploadParameters->getDatum($key);
 			break;
 
 		case self::DATA_COMBINED:
-			$data = $this->parameters->get($key);
+			$data = $this->parameters->getDatum($key);
 			break;
 
 		default:

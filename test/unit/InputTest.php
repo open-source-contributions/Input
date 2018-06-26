@@ -86,7 +86,7 @@ class InputTest extends TestCase {
 	public function testGetInvalidDataType(array $get, array $post):void {
 		self::expectException(InvalidInputMethodException::class);
 		$input = new Input($get, $post);
-		$input->get("test", "WRONG_TYPE");
+		$input->getDatum("test", "WRONG_TYPE");
 	}
 
 	/**
@@ -455,7 +455,6 @@ class InputTest extends TestCase {
 			);
 		}
 	}
-
 	public function testGetInt():void {
 		$input = new Input(self::FAKE_DATA);
 		self::assertNotSame("1234",$input->getInt("a-number"));

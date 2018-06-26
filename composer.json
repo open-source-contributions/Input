@@ -2,6 +2,7 @@
 	"name": "phpgt/input",
 	"description": "Encapsulated user input.",
 	"license": "MIT",
+	"minimum-stability": "dev",
 
 	"autoload": {
 		"psr-4": {
