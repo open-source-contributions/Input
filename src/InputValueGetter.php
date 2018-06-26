@@ -56,9 +56,13 @@ trait InputValueGetter {
 	}
 
 	public function getDateTime(string $key):DateTimeInterface {
+		return $this->getAs($key, DateTime::class);
+	}
+
+	public function getAs(string $key, string $class) {
 		try {
-			$dateTime = new DateTime($this[$key]);
-			return $dateTime;
+			$value = new $class($this[$key]);
+			return $value;
 		}
 		catch(Exception $exception) {
 			throw new DataNotCompatibleFormatException($key);
