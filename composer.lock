@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47dcc73292c81004b0693c207dccd3e5",
+    "content-hash": "b1235a9849cc93c38129be01f7ca803c",
     "packages": [
         {
             "name": "phpgt/cookie",
@@ -158,6 +158,39 @@
             ],
             "description": "PSR-7 HTTP message implementation.",
             "time": "2018-09-16T18:21:07+00:00"
+        },
+        {
+            "name": "phpgt/session",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhpGt/Session.git",
+                "reference": "e66ce47edab56388e6dfbb23e1d04bfbcc059b75"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhpGt/Session/zipball/e66ce47edab56388e6dfbb23e1d04bfbcc059b75",
+                "reference": "e66ce47edab56388e6dfbb23e1d04bfbcc059b75",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gt\\Session\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Encapsulated user sessions.",
+            "time": "2018-09-10T08:27:50+00:00"
         },
         {
             "name": "psr/http-message",
@@ -1729,7 +1762,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "phpgt/http": 20
+        "phpgt/http": 20,
+        "phpgt/session": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
